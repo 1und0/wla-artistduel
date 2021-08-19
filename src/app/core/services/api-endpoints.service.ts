@@ -103,6 +103,22 @@ export class ApiEndpointsService {
   }
 
 
+  public getArtistByName(
+    artist: string,
+    limit: string,
+  ): string {
+    return this.createUrlWithQueryParameters('',
+      (qs: QueryStringParameters) => {
+        qs.push('api_key', this.constants.API_KEY )
+        qs.push('method', 'artist.search');
+        qs.push('format', 'json');
+        qs.push('artist', artist);
+        qs.push('limit', limit);
+      }
+    );
+  }
+
+
   public getTopArtistsByCountry(
     country: string,
     limit: string,

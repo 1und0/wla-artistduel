@@ -1,0 +1,21 @@
+<h1> artist search</h1>
+
+<button
+      mat-raised-button
+      color="primary"
+      routerLink="/">
+      Back Home
+</button>
+
+<mat-nav-list *ngIf="infoIsLoaded">
+    <a
+    mat-list-item
+    [routerLink]="['/detail']"
+    [queryParams]="{id: artist.mbid}"
+    *ngFor="let artist of artists"
+    >
+      <img src="{{ artist.image[0]['#text'] }}">
+      {{ artist.name }}
+      {{ artist.listeners }}
+  </a>
+</mat-nav-list>

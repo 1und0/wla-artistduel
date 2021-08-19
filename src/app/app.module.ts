@@ -25,15 +25,18 @@ import { ApiEndpointsService } from './core/services/api-endpoints.service';
 import { ApiHttpService } from './core/services/api-http.service';
 import { Constants } from './config/constants';
 import { HeaderComponent } from './modules/home/components/header/header.component';
+import { ArtistSearchComponent } from './modules/home/components/artist-search/artist-search.component';
 import { DetailViewComponent } from './modules/home/components/detail-view/detail-view.component';
 import { MainViewComponent } from './modules/home/components/main-view/main-view.component';
+import { SearchValueService } from './core/services/searchvalue.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     DetailViewComponent,
-    MainViewComponent
+    MainViewComponent,
+    ArtistSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { MainViewComponent } from './modules/home/components/main-view/main-view
   providers: [
     ApiHttpService,
     ApiEndpointsService,
-    Constants
+    Constants,
+    SearchValueService
   ],
   bootstrap: [
     AppComponent
