@@ -1,0 +1,31 @@
+<button
+      mat-raised-button
+      color="primary"
+      routerLink="/">Back Home</button>
+
+<mat-card *ngIf="infoIsLoaded">
+  <h1>{{ artist.name }}</h1>
+  <img src="{{ artist.image[4]['#text']}}">
+  <p>Listeners: {{ artist.stats.listeners }}</p>
+  <p>Playcount: {{ artist.stats.playcount }}</p>
+  <hr>
+  <h2>Top 5 Ablums:</h2>
+  <mat-nav-list *ngIf="albumsIsLoaded">
+    <mat-list-item *ngFor="let album of albums">
+      <img src="{{ album.image[0]['#text'] }}">
+      {{album.name}}
+      {{album.playcount}}
+    </mat-list-item>
+  </mat-nav-list>
+  <hr>
+  <h2>Top 5 Tracks:</h2>
+  <mat-nav-list *ngIf="tracksIsLoaded">
+    <a mat-list-item *ngFor="let track of tracks">
+      <img src="{{ track.image[0]['#text'] }}">
+      {{track.name}}
+      {{track.playcount}}
+    </a>
+  </mat-nav-list>
+
+
+</mat-card>

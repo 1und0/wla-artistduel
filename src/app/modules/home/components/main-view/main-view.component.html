@@ -1,0 +1,19 @@
+
+<mat-form-field appearance="fill">
+  <mat-select
+    (selectionChange)="onCountrySelection($event.value)"
+    [(value)] = "preselectedOption.iso3166"
+  >
+    <mat-option *ngFor="let country of countries" [value]="country.iso3166">
+      {{ country.countryname }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-nav-list>
+  <a mat-list-item [routerLink]="['/detail']" [queryParams]="{id: artist.mbid}" *ngFor="let artist of artists">
+    <img src="{{ artist.image[0]['#text'] }}">
+     {{ artist.name }}
+     {{ artist.listeners }}
+  </a>
+</mat-nav-list>
