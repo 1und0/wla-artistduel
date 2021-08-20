@@ -25,7 +25,6 @@ export class HeaderComponent {
       .subscribe(
         (event: NavigationEvent) => {
           if(event instanceof NavigationEnd) {
-            console.log(this.test);
             if (event.url!="/") {
               this.test.nativeElement.firstChild.textContent='❮❮ Back';
             }

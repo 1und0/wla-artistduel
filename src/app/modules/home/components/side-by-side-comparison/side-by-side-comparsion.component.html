@@ -24,9 +24,9 @@
     <p>Listeners: {{ leftArtist.stats.listeners }}</p>
     <p>Playcount: {{ leftArtist.stats.playcount }}</p>
     <p>Tags:</p>
-    <mat-nav-list *ngFor="let tag of leftArtist.tags.tag">
-      <mat-list-item>
-        <p>{{ tag.name }}</p>
+    <mat-nav-list class="taglist">
+      <mat-list-item *ngFor="let tag of leftArtist.tags.tag">
+        <p class="tag">{{ tag.name }}</p>
       </mat-list-item>
     </mat-nav-list>
   </div>
@@ -58,9 +58,9 @@
         <p>Listeners: {{ rightArtist.stats.listeners }}</p>
         <p>Playcount: {{ rightArtist.stats.playcount }}</p>
         <p>Tags:</p>
-        <mat-nav-list *ngFor="let tag of rightArtist.tags.tag">
-          <mat-list-item>
-            <p>{{ tag.name }}</p>
+        <mat-nav-list class="taglist">
+          <mat-list-item *ngFor="let tag of rightArtist.tags.tag">
+            <p class="tag">{{ tag.name }}</p>
           </mat-list-item>
         </mat-nav-list>
       </div>
