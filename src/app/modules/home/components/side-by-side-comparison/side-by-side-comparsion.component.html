@@ -1,0 +1,69 @@
+<div class="responsive">
+  <mat-card class="left">
+  <form class="">
+  <mat-form-field>
+    <input
+      matInput
+      name='searchbar'
+      type="search"
+      placeholder="Suche"
+      (keydown)="searchLeft()"
+      [(ngModel)]='leftSearchValue'
+    >
+  </mat-form-field>
+</form>
+<mat-nav-list >
+  <a mat-list-item ngDefaultControl *ngFor="let leftSearchResult of leftSearchResults" (click)="loadLeftArtist(leftSearchResult.mbid)" >
+    <p class="artistname">{{ leftSearchResult.name }}</p>
+  </a>
+</mat-nav-list>
+<div class="artistabstract" *ngIf="leftArtist!=''">
+  <img src="{{ leftArtist.image[2]['#text']}}" class="banner">
+  <div class="infobox">
+    <h1>{{ leftArtist.name }}</h1>
+    <p>Listeners: {{ leftArtist.stats.listeners }}</p>
+    <p>Playcount: {{ leftArtist.stats.playcount }}</p>
+    <p>Tags:</p>
+    <mat-nav-list *ngFor="let tag of leftArtist.tags.tag">
+      <mat-list-item>
+        <p>{{ tag.name }}</p>
+      </mat-list-item>
+    </mat-nav-list>
+  </div>
+</div>
+</mat-card>
+
+  <mat-card class="right">
+    <form class="">
+      <mat-form-field>
+        <input
+          matInput
+          name='searchbar'
+          type="search"
+          placeholder="Suche"
+          (keydown)="searchRight()"
+          [(ngModel)]='rightSearchValue'
+        >
+      </mat-form-field>
+    </form>
+    <mat-nav-list>
+      <mat-list-item ngDefaultControl *ngFor="let rightSearchResult of rightSearchResults" (click)="loadRightArtist(rightSearchResult.mbid)">
+        <p>{{ rightSearchResult.name }}</p>
+      </mat-list-item>
+    </mat-nav-list>
+    <div class="artistabstract" *ngIf="rightArtist!=''">
+      <img src="{{ rightArtist.image[2]['#text']}}" class="banner">
+      <div class="infobox">
+        <h1>{{ rightArtist.name }}</h1>
+        <p>Listeners: {{ rightArtist.stats.listeners }}</p>
+        <p>Playcount: {{ rightArtist.stats.playcount }}</p>
+        <p>Tags:</p>
+        <mat-nav-list *ngFor="let tag of rightArtist.tags.tag">
+          <mat-list-item>
+            <p>{{ tag.name }}</p>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+    </div>
+  </mat-card>
+</div>

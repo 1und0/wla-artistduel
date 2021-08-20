@@ -10,8 +10,6 @@ import { Constants } from 'src/app/config/constants';
 @Injectable()
 export class ApiEndpointsService {
   constructor(
-
-
     // Application Constants
     private constants: Constants
   ) { }

@@ -1,5 +1,4 @@
 import { Component } from "@angular/core";
-import { ActivatedRoute } from '@angular/router';
 import { ApiHttpService } from 'src/app/core/services/api-http.service';
 import { ApiEndpointsService } from 'src/app/core/services/api-endpoints.service';
 import { SearchValueService } from "src/app/core/services/searchvalue.service";
@@ -20,7 +19,6 @@ export class ArtistSearchComponent {
   constructor(
     private apiHttpService: ApiHttpService,
     private apiEndpointsService: ApiEndpointsService,
-    private activatedRoute: ActivatedRoute,
     private searchValueService: SearchValueService
     ) {
       this.searchValueService.searchValue$.subscribe((data) => {

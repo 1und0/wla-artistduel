@@ -8,7 +8,7 @@ import { ApiEndpointsService } from './core/services/api-endpoints.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'wla-artistduel';
+  title = 'wla-meets-lastfm';
 
   constructor(
     // Application Services

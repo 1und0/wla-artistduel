@@ -29,6 +29,7 @@ import { ArtistSearchComponent } from './modules/home/components/artist-search/a
 import { DetailViewComponent } from './modules/home/components/detail-view/detail-view.component';
 import { MainViewComponent } from './modules/home/components/main-view/main-view.component';
 import { SearchValueService } from './core/services/searchvalue.service';
+import { SideBySideComparsonComponent } from './modules/home/components/side-by-side-comparison/side-by-side-comparison.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SearchValueService } from './core/services/searchvalue.service';
     HeaderComponent,
     DetailViewComponent,
     MainViewComponent,
+    SideBySideComparsonComponent,
     ArtistSearchComponent
   ],
   imports: [

@@ -20,3 +20,16 @@ a {
 a:hover {
   color: #ce6d6d;
 }
+
+.icon {
+  color: white;
+  float: right;
+  font-size: x-large;
+}
+
+
+.icon:hover {
+  color: #ce6d6d;
+  float: right;
+  font-size: x-large;
+}
