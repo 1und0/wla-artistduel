@@ -1,6 +1,5 @@
 .albumname {
   font-weight: bold;
-  color: goldenrod;
   width: 100%;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -8,7 +7,6 @@
 
 .trackname {
   font-weight: bold;
-  color: black;
   width: 100%;
   margin-top: 1rem;
   margin-left: 1rem;
@@ -16,6 +14,7 @@
 
 .addinfo {
  width: 95%;
+ color: #d50000;
  float: right;
  text-align: right;
  margin-top: 1rem;
@@ -23,6 +22,7 @@
 
 .descriptor {
   font-size: x-small;
+  color:  black;
   font-weight: light;
   margin-left: 5px;
 }

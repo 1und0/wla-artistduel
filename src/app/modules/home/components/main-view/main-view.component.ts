@@ -1,6 +1,6 @@
 import { Component, } from "@angular/core";
-import { Country } from "src/app/shared/models/country.model";
-import { Artist } from "src/app/shared/models/artist.model";
+import { Country } from "src/app/shared/classes/models/country.model";
+import { Artist } from "src/app/shared/classes/models/artist.model";
 import { AppComponent } from "src/app/app.component";
 import { ApiHttpService } from 'src/app/core/services/api-http.service';
 import { ApiEndpointsService } from 'src/app/core/services/api-endpoints.service';
