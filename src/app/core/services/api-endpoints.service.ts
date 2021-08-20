@@ -44,23 +44,6 @@ export class ApiEndpointsService {
     return urlBuilder.toString();
   }
 
-  public getTest(){
-    return 'https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=5c6b44a212f94d81da6aded8014d9b4d&format=json'
-  }
-
-  public getBuiltTest(
-    method: string,
-    format: string
-  ): string {
-    return this.createUrlWithQueryParameters('',
-      (qs: QueryStringParameters) => {
-        qs.push('api_key', this.constants.API_KEY )
-        qs.push('method', method);
-        qs.push('format', format);
-      }
-    );
-  }
-
   public getArtistByID(
     mbid: string,
   ): string {
