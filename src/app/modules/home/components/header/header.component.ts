@@ -5,7 +5,7 @@ import { SearchValueService } from "src/app/core/services/searchvalue.service";
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.html']
+  styleUrls: ['./header.component.css']
 })
 
 export class HeaderComponent {
@@ -21,6 +21,7 @@ export class HeaderComponent {
   }
 
   onChange() {
+    //catch routing to self
     if (this.router.url != '/search') {
       this.router.navigateByUrl('/search').then(e => {
         if (e) {

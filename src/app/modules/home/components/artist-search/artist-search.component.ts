@@ -7,6 +7,7 @@ import { SearchValueService } from "src/app/core/services/searchvalue.service";
 @Component ({
   selector: 'artist-search',
   templateUrl: './artist-search.component.html',
+  styleUrls: ['./artist-search.component.css'],
 })
 
 
@@ -26,11 +27,10 @@ export class ArtistSearchComponent {
         this.searchValue = data;
         this.getArtists(data);
       })
-
-
       }
 
       getArtists(searchterm: string) {
+        //catch sub 3 character search terms
         if (searchterm.length > 1) {
           this.apiHttpService
           .get(this.apiEndpointsService.getArtistByName(searchterm, '13'))

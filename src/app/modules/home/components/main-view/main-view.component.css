@@ -1,0 +1,18 @@
+mat-form-field{
+  display: block;
+  width: 100%;
+  margin-top: 3rem;
+}
+.artistname {
+  font-weight: bold;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.addinfo {
+ color: brown;
+ width: 95%;
+ float: right;
+ text-align: right;
+ margin-top: 1rem;
+}

@@ -1,0 +1,49 @@
+.albumname {
+  font-weight: bold;
+  color: goldenrod;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.trackname {
+  font-weight: bold;
+  color: black;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.addinfo {
+ width: 95%;
+ float: right;
+ text-align: right;
+ margin-top: 1rem;
+}
+
+.descriptor {
+  font-size: x-small;
+  font-weight: light;
+  margin-left: 5px;
+}
+
+.banner {
+ float: left;
+}
+
+.infobox {
+ float: left;
+ padding: 1rem;
+}
+
+.artistabstract {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

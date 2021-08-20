@@ -3,3 +3,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.responsive{
+  width: 800px !important;
+  margin: 0 auto 0 auto;
+}
+
+/* Tabled Portrait */
+@media screen and (max-width: 768px) {
+  .responsive{
+    width: 95% !important;
+    margin: 0 auto 0 auto;
+  }
+}

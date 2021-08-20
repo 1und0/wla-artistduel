@@ -3,18 +3,22 @@
       color="primary"
       routerLink="/">Back Home</button>
 
-<mat-card *ngIf="infoIsLoaded">
-  <h1>{{ artist.name }}</h1>
-  <img src="{{ artist.image[4]['#text']}}">
-  <p>Listeners: {{ artist.stats.listeners }}</p>
-  <p>Playcount: {{ artist.stats.playcount }}</p>
-  <hr>
+<mat-card *ngIf="infoIsLoaded" class="responsive">
+  <div class="artistabstract clearfix">
+    <img src="{{ artist.image[4]['#text']}}" class="banner">
+    <div class="infobox">
+      <h1>{{ artist.name }}</h1>
+      <p>Listeners: {{ artist.stats.listeners }}</p>
+      <p>Playcount: {{ artist.stats.playcount }}</p>
+    </div>
+  </div>
+  <hr class="clearfloat">
   <h2>Top 5 Ablums:</h2>
   <mat-nav-list *ngIf="albumsIsLoaded">
     <mat-list-item *ngFor="let album of albums">
       <img src="{{ album.image[0]['#text'] }}">
-      {{album.name}}
-      {{album.playcount}}
+      <p class="albumname">{{album.name}}</p>
+      <p class="addinfo">{{album.playcount}}<span class="descriptor">(plays)</span></p>
     </mat-list-item>
   </mat-nav-list>
   <hr>
@@ -22,8 +26,8 @@
   <mat-nav-list *ngIf="tracksIsLoaded">
     <a mat-list-item *ngFor="let track of tracks">
       <img src="{{ track.image[0]['#text'] }}">
-      {{track.name}}
-      {{track.playcount}}
+      <p class="trackname">{{track.name}}</p>
+      <p class="addinfo">{{track.playcount}}<span class="descriptor">(plays)</span></p>
     </a>
   </mat-nav-list>
 

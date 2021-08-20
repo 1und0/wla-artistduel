@@ -8,6 +8,7 @@ import { ApiEndpointsService } from 'src/app/core/services/api-endpoints.service
 @Component ({
   selector: 'app-main-view',
   templateUrl: './main-view.component.html',
+  styleUrls: ['./main-view.component.css'],
 })
 
 
