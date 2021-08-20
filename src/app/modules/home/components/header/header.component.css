@@ -12,3 +12,11 @@ input {
   width: 100%;
 }
 
+a {
+  color: #d50000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ce6d6d;
+}
