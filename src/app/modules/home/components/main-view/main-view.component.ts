@@ -1,4 +1,4 @@
-import { Component, } from "@angular/core";
+import { Component, OnInit, } from "@angular/core";
 import { Country } from "src/app/shared/classes/models/country.model";
 import { Artist } from "src/app/shared/classes/models/artist.model";
 import { AppComponent } from "src/app/app.component";
@@ -11,9 +11,7 @@ import { ApiEndpointsService } from 'src/app/core/services/api-endpoints.service
   styleUrls: ['./main-view.component.css'],
 })
 
-
-
-export class MainViewComponent {
+export class MainViewComponent implements OnInit {
   artists: any[] = [];
 
   countries: Country[] =[
@@ -27,7 +25,11 @@ export class MainViewComponent {
   constructor(
     private apiHttpService: ApiHttpService,
     private apiEndpointsService: ApiEndpointsService) {
+  }
+
+  ngOnInit() {
     this.onCountrySelection(this.preselectedOption.iso3166);
+
   }
 
   onCountrySelection(cid: string) {

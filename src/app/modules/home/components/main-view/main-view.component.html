@@ -4,7 +4,7 @@
     <mat-form-field appearance="fill">
       <mat-select
         (selectionChange)="onCountrySelection($event.value)"
-        [(value)] = "preselectedOption.iso3166"
+        [value] = "preselectedOption.iso3166"
       >
         <mat-option *ngFor="let country of countries" [value]="country.iso3166">
           {{ country.countryname }}
